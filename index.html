@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<!-- BOOTSTRAP (style only)-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>Reading Iteration</title>
+</head>
+<body lang="en-US">
+  <p>While loops will run how ever many times you want it to. Enter how many
+    times you want the loop to run. Let's keep it below 10 loops for simplicity.
+  </p>
+     <input type="text" id="num1" onchange="whileFunc();"><br>
+      <p id="message"</p>
+<script type="text/javascript">
+
+function whileFunc()
+{
+   var inputWhile;
+   inputWhile = document.getElementById("num1").value;
+   var x = 1;
+
+   if(isNaN(inputWhile))
+   {
+     document.getElementById("message").innerHTML = "Enter numbers only!";
+   }
+   else if(inputWhile > 11)
+   {
+     document.getElementById("message").innerHTML = "Number is too big!";
+   }
+   else
+   {
+     while(inputWhile != 0)
+     {
+       document.getElementById("message").innerHTML ="The loop ran " + x +" times.";
+       x++;
+       inputWhile--;
+     }
+   }
+}
+
+</script>
+</body>
+</html>
